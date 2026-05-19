@@ -1,0 +1,284 @@
+{
+  "validationError": {
+    "status": "error",
+    "timestamp": "2026-05-11T15:47:00+08:00",
+    "error": {
+      "code": "validation.invalid_payload",
+      "message": "请求体不符合已发布的结构约束。",
+      "recoverability": "non_recoverable",
+      "details": { "field": "openingMessage", "issue": "必填" },
+      "traceId": "trace-001"
+    }
+  },
+  "sessionNotFound": {
+    "status": "error",
+    "timestamp": "2026-05-11T15:47:10+08:00",
+    "error": {
+      "code": "counseling.session_not_found",
+      "message": "未找到对应的咨询会话。",
+      "recoverability": "non_recoverable",
+      "details": { "sessionId": "csl-session-missing" },
+      "traceId": "trace-002"
+    }
+  },
+  "runNotFound": {
+    "status": "error",
+    "timestamp": "2026-05-13T10:02:00+08:00",
+    "error": {
+      "code": "simulation.run_not_found",
+      "message": "未找到与该 runId 对应的情境模拟运行记录。",
+      "recoverability": "non_recoverable"
+    }
+  },
+  "inputNotFound": {
+    "status": "error",
+    "timestamp": "2026-05-13T10:03:00+08:00",
+    "error": {
+      "code": "resonance.input_not_found",
+      "message": "未找到与该 inputId 对应的共振输入记录。",
+      "recoverability": "non_recoverable"
+    }
+  },
+  "reportNotReady": {
+    "status": "error",
+    "timestamp": "2026-05-11T15:47:20+08:00",
+    "error": {
+      "code": "report.not_ready",
+      "message": "报告尚未生成。",
+      "recoverability": "recoverable",
+      "details": { "reportOwnerId": "run-001" },
+      "traceId": "trace-003"
+    }
+  },
+  "reportNotFound": {
+    "status": "error",
+    "timestamp": "2026-05-13T10:05:00+08:00",
+    "error": {
+      "code": "report.not_found",
+      "message": "未找到与该 reportId 对应的报告。",
+      "recoverability": "non_recoverable"
+    }
+  },
+  "runtimeUnavailable": {
+    "status": "error",
+    "timestamp": "2026-05-13T10:06:00+08:00",
+    "error": {
+      "code": "runtime.unavailable",
+      "message": "AI 运行时当前不可用。",
+      "recoverability": "recoverable"
+    }
+  },
+  "runtimeProviderTimeout": {
+    "status": "error",
+    "timestamp": "2026-05-13T10:07:00+08:00",
+    "error": {
+      "code": "runtime.provider_timeout",
+      "message": "提供商请求已超过配置的超时时间。",
+      "recoverability": "recoverable",
+      "details": { "timeoutMs": 30000, "operation": "agent-run" }
+    }
+  },
+  "runtimeProviderUnavailable": {
+    "status": "error",
+    "timestamp": "2026-05-13T10:08:00+08:00",
+    "error": {
+      "code": "runtime.provider_unavailable",
+      "message": "提供商端点当前暂时不可达。",
+      "recoverability": "recoverable"
+    }
+  },
+  "runtimeRateLimited": {
+    "status": "error",
+    "timestamp": "2026-05-13T10:09:00+08:00",
+    "error": {
+      "code": "runtime.provider_rate_limited",
+      "message": "提供商因速率限制拒绝了本次请求。",
+      "recoverability": "recoverable"
+    }
+  },
+  "runtimePromptPackNotFound": {
+    "status": "error",
+    "timestamp": "2026-05-13T10:10:00+08:00",
+    "error": {
+      "code": "runtime.prompt_pack_not_found",
+      "message": "未找到请求的提示包版本。",
+      "recoverability": "non_recoverable"
+    }
+  },
+  "runtimeStructuredOutputInvalid": {
+    "status": "error",
+    "timestamp": "2026-05-13T10:11:00+08:00",
+    "error": {
+      "code": "runtime.structured_output_invalid",
+      "message": "提供商输出与预期结构不匹配。",
+      "recoverability": "recoverable"
+    }
+  },
+  "retrievalUnavailable": {
+    "status": "error",
+    "timestamp": "2026-05-13T10:12:00+08:00",
+    "error": {
+      "code": "retrieval.vector_store_unavailable",
+      "message": "向量库当前不可用于检索。",
+      "recoverability": "recoverable"
+    }
+  },
+  "retrievalNoCandidates": {
+    "status": "error",
+    "timestamp": "2026-05-13T10:13:00+08:00",
+    "error": {
+      "code": "retrieval.no_candidates_found",
+      "message": "当前查询未找到可匹配的候选内容。",
+      "recoverability": "non_recoverable"
+    }
+  },
+  "persistenceQueryFailed": {
+    "status": "error",
+    "timestamp": "2026-05-13T10:14:00+08:00",
+    "error": {
+      "code": "persistence.query_failed",
+      "message": "数据库查询未能完成。",
+      "recoverability": "recoverable"
+    }
+  },
+  "persistenceMigrationNeeded": {
+    "status": "error",
+    "timestamp": "2026-05-13T10:15:00+08:00",
+    "error": {
+      "code": "persistence.migration_needed",
+      "message": "使用前需要先执行数据库结构迁移。",
+      "recoverability": "non_recoverable"
+    }
+  },
+  "hostSettingsLoadFailed": {
+    "status": "error",
+    "timestamp": "2026-05-13T12:00:00+08:00",
+    "error": {
+      "code": "host.settings_load_failed",
+      "message": "无法从配置目录加载宿主设置。",
+      "recoverability": "non_recoverable",
+      "details": { "configPath": "./settings.json" },
+      "traceId": "trace-004"
+    }
+  },
+  "hostProviderConfigMissing": {
+    "status": "error",
+    "timestamp": "2026-05-13T10:17:00+08:00",
+    "error": {
+      "code": "host.provider_config_missing",
+      "message": "尚未设置提供商配置。",
+      "recoverability": "non_recoverable"
+    }
+  },
+  "hostConsentNotCompleted": {
+    "status": "error",
+    "timestamp": "2026-05-13T10:18:00+08:00",
+    "error": {
+      "code": "host.consent_not_completed",
+      "message": "必须先完成免责声明接受与风险确认。",
+      "recoverability": "non_recoverable"
+    }
+  },
+  "securityRiskConfirmationRequired": {
+    "status": "error",
+    "timestamp": "2026-05-13T10:19:00+08:00",
+    "error": {
+      "code": "security.risk_confirmation_required",
+      "message": "继续前必须完成风险确认。",
+      "recoverability": "non_recoverable"
+    }
+  },
+  "hostDataDirectoryUnavailable": {
+    "status": "error",
+    "timestamp": "2026-05-13T12:00:10+08:00",
+    "error": {
+      "code": "host.data_directory_unavailable",
+      "message": "宿主数据目录不存在或当前不可访问。",
+      "recoverability": "non_recoverable",
+      "details": { "dataDir": "./data" },
+      "traceId": "trace-005"
+    }
+  },
+  "hostWorkspaceRootUnavailable": {
+    "status": "error",
+    "timestamp": "2026-05-13T12:00:40+08:00",
+    "error": {
+      "code": "host.workspace_root_unavailable",
+      "message": "宿主工作区根目录缺失或当前不可访问。",
+      "recoverability": "non_recoverable",
+      "details": { "expectedPath": "./workspace" },
+      "traceId": "trace-008"
+    }
+  },
+  "hostExportDirectoryUnavailable": {
+    "status": "error",
+    "timestamp": "2026-05-13T12:00:50+08:00",
+    "error": {
+      "code": "host.export_directory_unavailable",
+      "message": "无法定位或创建宿主导出目录。",
+      "recoverability": "recoverable",
+      "details": { "expectedPath": "./exports" },
+      "traceId": "trace-009"
+    }
+  },
+  "storageDataDirectoryNotFound": {
+    "status": "error",
+    "timestamp": "2026-05-13T12:00:20+08:00",
+    "error": {
+      "code": "storage.data_directory_not_found",
+      "message": "未找到必需的存储子目录。",
+      "recoverability": "recoverable",
+      "details": { "expectedDirectory": "snapshots" },
+      "traceId": "trace-006"
+    }
+  },
+  "storageDataDirectoryCorrupted": {
+    "status": "error",
+    "timestamp": "2026-05-13T12:00:30+08:00",
+    "error": {
+      "code": "storage.data_directory_corrupted",
+      "message": "某个数据目录中存在损坏或不可读取的文件。",
+      "recoverability": "non_recoverable",
+      "details": { "affectedDirectory": "exports" },
+      "traceId": "trace-007"
+    }
+  },
+  "storageDataDirectoryAccessDenied": {
+    "status": "error",
+    "timestamp": "2026-05-13T12:01:00+08:00",
+    "error": {
+      "code": "storage.data_directory_access_denied",
+      "message": "访问必需的存储子目录时被拒绝。",
+      "recoverability": "non_recoverable",
+      "details": { "affectedDirectory": "db" },
+      "traceId": "trace-010"
+    }
+  },
+  "exportFormatUnsupported": {
+    "status": "error",
+    "timestamp": "2026-05-13T10:26:00+08:00",
+    "error": {
+      "code": "export.format_unsupported",
+      "message": "当前不支持请求的导出格式。",
+      "recoverability": "non_recoverable"
+    }
+  },
+  "exportFailed": {
+    "status": "error",
+    "timestamp": "2026-05-13T10:27:00+08:00",
+    "error": {
+      "code": "export.failed",
+      "message": "导出操作未能完成。",
+      "recoverability": "recoverable"
+    }
+  },
+  "cleanupFailed": {
+    "status": "error",
+    "timestamp": "2026-05-13T10:28:00+08:00",
+    "error": {
+      "code": "cleanup.failed",
+      "message": "清理操作未能完成。",
+      "recoverability": "recoverable"
+    }
+  }
+}

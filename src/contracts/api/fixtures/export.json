@@ -1,0 +1,79 @@
+{
+  "reportExportRequest": {
+    "reportId": "report-csl-001",
+    "workflow": "counseling",
+    "format": "html"
+  },
+  "reportExportResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-13T19:10:00+08:00",
+    "data": {
+      "reportId": "report-csl-001",
+      "format": "html",
+      "fileName": "counseling-report-csl-001.html",
+      "mimeType": "text/html",
+      "exportedAt": "2026-05-13T19:10:00+08:00",
+      "reference": {
+        "reportId": "report-csl-001",
+        "workflow": "counseling",
+        "reportVersion": "v1",
+        "generatedAt": "2026-05-11T15:50:00+08:00"
+      }
+    }
+  },
+  "batchExportRequest": {
+    "reportIds": [
+      { "reportId": "report-csl-001", "workflow": "counseling" },
+      { "reportId": "report-sim-001", "workflow": "simulation" }
+    ],
+    "format": "json"
+  },
+  "batchExportResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-13T19:11:00+08:00",
+    "data": {
+      "format": "json",
+      "items": [
+        { "reportId": "report-csl-001", "fileName": "counseling-report-csl-001.json", "success": true },
+        { "reportId": "report-sim-001", "fileName": "simulation-report-sim-001.json", "success": true }
+      ],
+      "successCount": 2,
+      "failureCount": 0,
+      "completedAt": "2026-05-13T19:11:00+08:00"
+    }
+  },
+  "historyRequest": {
+    "workflow": "counseling",
+    "page": 1,
+    "pageSize": 10
+  },
+  "historyResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-13T19:12:00+08:00",
+    "data": {
+      "items": [
+        {
+          "entryId": "entry-001",
+          "workflow": "counseling",
+          "title": "Stress and Sleep Disruption Report",
+          "summary": "A counseling report focused on acute stress and sleep disruption.",
+          "timestamp": "2026-05-11T15:50:00+08:00",
+          "reportReference": {
+            "reportId": "report-csl-001",
+            "workflow": "counseling",
+            "reportVersion": "v1",
+            "generatedAt": "2026-05-11T15:50:00+08:00"
+          },
+          "navScene": "report",
+          "navEntityId": "report-csl-001"
+        }
+      ],
+      "pageInfo": {
+        "page": 1,
+        "pageSize": 10,
+        "totalItems": 1,
+        "hasNextPage": false
+      }
+    }
+  }
+}

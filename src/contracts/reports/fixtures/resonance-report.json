@@ -1,0 +1,137 @@
+{
+  "base": {
+    "reportId": "report-res-001",
+    "reportType": "resonance",
+    "status": "ready",
+    "generatedAt": "2026-05-11T15:46:00+08:00",
+    "reportVersion": "v1",
+    "generatedBy": "reporting-package-v1",
+    "sanitized": true,
+    "templateVersion": "v1"
+  },
+  "source": {
+    "workflow": "resonance",
+    "sourceEntityId": "res-compare-001",
+    "sourceLabel": "家庭冲突同频共振比对"
+  },
+  "summary": {
+    "title": "家庭冲突同频共振报告",
+    "summary": "本次比对将当前文本叙事与《长期家庭紧张下的情绪关闭》识别为最接近案例，主要依据是家庭冲突、情绪麻木，但关系修复尝试仍未被完全覆盖。",
+    "highlights": [
+      {
+        "highlightId": "res-highlight-001",
+        "label": "最高匹配分",
+        "value": "0.92"
+      },
+      {
+        "highlightId": "res-highlight-002",
+        "label": "核心线索",
+        "value": "家庭冲突"
+      },
+      {
+        "highlightId": "res-highlight-003",
+        "label": "案例数量",
+        "value": "1"
+      }
+    ]
+  },
+  "detail": {
+    "comparisonId": "res-compare-001",
+    "input": {
+      "inputId": "res-input-001",
+      "sourceType": "text",
+      "submittedAt": "2026-05-11T15:45:00+08:00",
+      "summary": "用户描述了自己在反复家庭冲突后出现情绪麻木，并且不确定该如何回应。",
+      "tags": [
+        "家庭",
+        "退缩"
+      ]
+    },
+    "matchedCases": [
+      {
+        "matchId": "match-001",
+        "caseId": "case-102",
+        "title": "长期家庭紧张下的情绪关闭",
+        "score": 0.92,
+        "rationale": "该案例与输入在家庭冲突、情绪麻木等线索上形成了稳定呼应。",
+        "sharedThemes": [
+          "情绪麻木",
+          "反复冲突"
+        ],
+        "matchedSignals": [
+          "家庭冲突",
+          "情绪麻木"
+        ],
+        "mismatchSignals": [
+          "关系修复尝试"
+        ],
+        "whyMatched": "该案例与输入在家庭冲突、情绪麻木等线索上形成了稳定呼应。",
+        "whyNotFullyMatched": "但关系修复尝试等线索没有被该案例完整覆盖。",
+        "uncertainty": "仍需进一步确认输入中是否存在主动修复关系的意愿或行动。",
+        "excerpt": "当事人在反复家庭对抗后出现明显的情绪麻木，并以沉默和退缩作为自我保护。"
+      }
+    ],
+    "fragmentComparisons": [
+      {
+        "comparisonId": "fragment-001",
+        "inputExcerpt": "反复的家庭冲突让我变得麻木，我不知道还能怎么回应。",
+        "caseExcerpt": "当事人在反复家庭对抗后出现明显的情绪麻木，并以沉默和退缩作为自我保护。",
+        "interpretation": "输入与案例都指向家庭冲突后的情绪关闭和保护性退缩，但案例没有覆盖主动修复关系的部分。",
+        "matchedSignals": [
+          "家庭冲突",
+          "情绪麻木"
+        ],
+        "mismatchSignals": [
+          "关系修复尝试"
+        ],
+        "whyMatched": "输入和案例都呈现出家庭冲突后的情绪关闭模式。",
+        "whyNotFullyMatched": "案例更多强调退缩与沉默，没有明确呈现修复关系的尝试。",
+        "uncertainty": "仍需确认用户当前是否在尝试主动改变关系互动。"
+      }
+    ],
+    "themeInterpretations": [
+      {
+        "themeId": "theme-001",
+        "theme": "家庭冲突",
+        "explanation": "《长期家庭紧张下的情绪关闭》在家庭冲突这一线索上与输入形成明显呼应，但关系修复尝试仍未被完整覆盖。",
+        "confidence": 0.92,
+        "supportingCaseIds": [
+          "case-102"
+        ],
+        "whyMatched": "家庭冲突是最终保留案例里反复出现的核心匹配线索。",
+        "whyNotFullyMatched": "但关系修复尝试仍没有被这些案例完全解释。",
+        "uncertainty": "仍需确认输入中是否存在主动修复关系的意愿或行动。"
+      }
+    ],
+    "boundaryNotice": "本同频共振报告由 AI 生成。相似案例比对仅供理解和参考，不构成临床诊断。"
+  },
+  "history": {
+    "items": [
+      {
+        "entryId": "res-history-001",
+        "occurredAt": "2026-05-11T15:45:00+08:00",
+        "title": "已提交输入",
+        "summary": "关于反复家庭冲突后情绪麻木的叙述已被捕获并进入比对流程。",
+        "relatedEntityId": "res-input-001"
+      },
+      {
+        "entryId": "res-history-002",
+        "occurredAt": "2026-05-11T15:46:00+08:00",
+        "title": "已生成比对",
+        "summary": "系统保留了一个高置信度案例，并明确记录了匹配依据、覆盖不足和不确定性。",
+        "relatedEntityId": "res-compare-001"
+      }
+    ]
+  },
+  "exportMeta": {
+    "format": "html",
+    "fileName": "resonance-report-res-compare-001.html",
+    "mimeType": "text/html",
+    "exportedAt": "2026-05-11T15:46:20+08:00",
+    "generatorVersion": "reporting-v1",
+    "templateVersion": "v1",
+    "formatVersion": "v1",
+    "sanitized": true,
+    "exportedBy": "psyai-reporting"
+  }
+}

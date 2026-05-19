@@ -1,0 +1,27 @@
+{
+  "name": "@psyai/infrastructure",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@types/sql.js": "^1.4.11",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "pretest": "npm run build --silent",
+    "test": "node ./tests/run-infrastructure-tests.mjs"
+  },
+  "dependencies": {
+    "@psyai/runtime": "file:../runtime",
+    "openai": "^6.37.0",
+    "sql.js": "^1.14.1"
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "startRequest": {
+    "clientRequestId": "req-counseling-start-001",
+    "openingMessage": "我已经持续紧绷了一周，怎么都平静不下来。",
+    "userContext": [
+      "睡眠中断",
+      "截止压力"
+    ]
+  },
+  "startResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-11T15:30:00+08:00",
+    "data": {
+      "sessionId": "csl-session-001",
+      "status": "active",
+      "createdAt": "2026-05-11T15:30:00+08:00",
+      "updatedAt": "2026-05-11T15:30:00+08:00",
+      "bootstrap": {
+        "ready": true,
+        "scene": "focus",
+        "workflow": "counseling"
+      },
+      "latestAnalysis": {
+        "stage": "intake",
+        "summary": "用户表现出明显的急性压力反应和睡眠干扰。",
+        "riskLevel": "moderate",
+        "escalationResult": {
+          "escalationStatus": "none"
+        }
+      },
+      "turns": [
+        {
+          "turnId": "csl-turn-001",
+          "role": "user",
+          "content": "我已经持续紧绷了一周，怎么都平静不下来。",
+          "createdAt": "2026-05-11T15:30:00+08:00"
+        }
+      ]
+    }
+  },
+  "replyRequest": {
+    "sessionId": "csl-session-001",
+    "message": "而且我最近每晚都会醒来好几次。"
+  },
+  "replyResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-11T15:31:00+08:00",
+    "data": {
+      "sessionId": "csl-session-001",
+      "status": "active",
+      "createdAt": "2026-05-11T15:30:00+08:00",
+      "updatedAt": "2026-05-11T15:31:00+08:00",
+      "latestAnalysis": {
+        "stage": "exploration",
+        "summary": "压力症状已经开始影响睡眠连续性。",
+        "riskLevel": "moderate",
+        "escalationResult": {
+          "escalationStatus": "review_recommended",
+          "escalatedAt": "2026-05-11T15:31:00+08:00",
+          "escalatedDuringTurnId": "csl-turn-002",
+          "reason": "睡眠中断与截止压力叠加，提示风险正在升高。"
+        }
+      },
+      "reply": {
+        "turnId": "csl-turn-002",
+        "role": "assistant",
+        "content": "你每次醒来之前，通常会发生什么，能和我仔细说说吗？",
+        "createdAt": "2026-05-11T15:31:00+08:00"
+      }
+    }
+  },
+  "finishRequest": {
+    "sessionId": "csl-session-001",
+    "reason": "user_completed"
+  },
+  "finishResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-11T15:50:00+08:00",
+    "data": {
+      "sessionId": "csl-session-001",
+      "status": "finished",
+      "finishedAt": "2026-05-11T15:50:00+08:00",
+      "reportReference": {
+        "reportId": "report-csl-001",
+        "workflow": "counseling",
+        "reportVersion": "v1",
+        "generatedAt": "2026-05-11T15:50:00+08:00"
+      }
+    }
+  },
+  "getRequest": {
+    "sessionId": "csl-session-001"
+  },
+  "getResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-11T15:32:00+08:00",
+    "data": {
+      "sessionId": "csl-session-001",
+      "status": "active",
+      "createdAt": "2026-05-11T15:30:00+08:00",
+      "updatedAt": "2026-05-11T15:31:00+08:00",
+      "latestAnalysis": {
+        "stage": "exploration",
+        "summary": "压力症状已经开始影响睡眠连续性。",
+        "riskLevel": "moderate",
+        "escalationResult": {
+          "escalationStatus": "review_recommended",
+          "escalatedAt": "2026-05-11T15:31:00+08:00",
+          "escalatedDuringTurnId": "csl-turn-002",
+          "reason": "睡眠中断与截止压力叠加，提示风险正在升高。"
+        }
+      },
+      "turns": [
+        {
+          "turnId": "csl-turn-001",
+          "role": "user",
+          "content": "我已经持续紧绷了一周，怎么都平静不下来。",
+          "createdAt": "2026-05-11T15:30:00+08:00"
+        },
+        {
+          "turnId": "csl-turn-002",
+          "role": "assistant",
+          "content": "你每次醒来之前，通常会发生什么，能和我仔细说说吗？",
+          "createdAt": "2026-05-11T15:31:00+08:00"
+        }
+      ]
+    }
+  },
+  "reportRequest": {
+    "sessionId": "csl-session-001"
+  },
+  "reportResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-11T15:50:00+08:00",
+    "data": {
+      "sessionId": "csl-session-001",
+      "ready": true,
+      "reportReference": {
+        "reportId": "report-csl-001",
+        "workflow": "counseling",
+        "reportVersion": "v1",
+        "generatedAt": "2026-05-11T15:50:00+08:00"
+      }
+    }
+  },
+  "listRequest": {
+    "page": 1,
+    "pageSize": 10,
+    "status": "active"
+  },
+  "listResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-13T10:00:00+08:00",
+    "data": {
+      "items": [
+        {
+          "sessionId": "csl-session-001",
+          "status": "active",
+          "createdAt": "2026-05-11T15:30:00+08:00",
+          "updatedAt": "2026-05-11T15:31:00+08:00",
+          "latestStage": "exploration",
+          "riskLevel": "moderate",
+          "turnCount": 3,
+          "reportReference": {
+            "reportId": "report-csl-001",
+            "workflow": "counseling",
+            "reportVersion": "v1",
+            "generatedAt": "2026-05-11T15:50:00+08:00"
+          }
+        }
+      ],
+      "pageInfo": {
+        "page": 1,
+        "pageSize": 10,
+        "totalItems": 1,
+        "hasNextPage": false
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@psyai/desktop-electron",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && vite build --configLoader native",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "start": "npm run build --silent && electron dist/main.js",
+    "dist": "npm run build --silent && electron-builder --config electron-builder.yml"
+  },
+  "dependencies": {
+    "@psyai/backend": "file:../backend",
+    "@psyai/frontend": "file:../frontend",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^6.0.1",
+    "electron": "^35.2.0",
+    "electron-builder": "^26.0.12",
+    "typescript": "^5.4.5",
+    "vite": "^8.0.12"
+  }
+}

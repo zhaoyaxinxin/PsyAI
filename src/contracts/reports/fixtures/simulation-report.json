@@ -1,0 +1,149 @@
+{
+  "base": {
+    "reportId": "report-sim-001",
+    "reportType": "simulation",
+    "status": "ready",
+    "generatedAt": "2026-05-17T12:20:00+08:00",
+    "reportVersion": "v1",
+    "generatedBy": "reporting-package-v1",
+    "sanitized": true,
+    "templateVersion": "v1"
+  },
+  "source": {
+    "workflow": "simulation",
+    "sourceEntityId": "run-001",
+    "sourceLabel": "重落红尘间运行记录"
+  },
+  "summary": {
+    "title": "重落红尘间：旧院夜谈回合报告",
+    "summary": "这份报告记录了玩家如何在旧院夜谈中接住第一轮家族压力，并把公开冲突压回较可控的私下对话。",
+    "highlights": [
+      {
+        "highlightId": "sim-highlight-001",
+        "label": "完成回合",
+        "value": "1"
+      },
+      {
+        "highlightId": "sim-highlight-002",
+        "label": "核心冲突",
+        "value": "长辈施压与晚辈回避"
+      }
+    ]
+  },
+  "detail": {
+    "scenarioId": "scenario-001",
+    "runId": "run-001",
+    "preparation": {
+      "scenarioTitle": "重落红尘间：旧院夜谈",
+      "playerSummary": "玩家是离家多年后回到旧院的晚辈，既想留下说话空间，也害怕一句话点燃旧账。",
+      "npcSummaries": [
+        "二叔是今晚最强势的长辈，表面要求玩家表态，背后担心家中秩序失控。"
+      ],
+      "environmentSummary": "深夜、旧院、雨声和多人旁听，构成了一个极易放大情绪的环境。",
+      "sourceNotes": [
+        "玩家与家里已经冷战三个月。"
+      ]
+    },
+    "overview": {
+      "scenarioTitle": "重落红尘间：旧院夜谈",
+      "scenarioSummary": "玩家需要在家族旧院的高压夜谈里，处理长辈施压与环境放大效应。",
+      "startedAt": "2026-05-17T12:03:00+08:00",
+      "completedAt": "2026-05-17T12:18:00+08:00",
+      "routeSummary": {
+        "visitedNodeCount": 2,
+        "branchDecisionCount": 1,
+        "endingNodeId": "node-ending-001"
+      }
+    },
+    "keyNodes": [
+      {
+        "nodeId": "node-entry-001",
+        "title": "回到旧院",
+        "kind": "entry",
+        "impactSummary": "玩家决定先处理最强势的公开压力。"
+      }
+    ],
+    "actorStateChanges": [
+      {
+        "actorId": "agent-player-001",
+        "actorName": "我",
+        "beforeState": "压着情绪观察局势。",
+        "afterState": "主动接住了第一轮压力。",
+        "changeSummary": "玩家从被动观察切换成主动控场。"
+      }
+    ],
+    "turnOutcomes": [
+      {
+        "turnId": "turn-001",
+        "turnIndex": 1,
+        "playerActionLabel": "先请二叔单独说话",
+        "consequenceSummary": "公开压力被压低，但玩家被推进了更难回避的私下表态时刻。",
+        "dialogueLines": [
+          "我：先请二叔单独说话，这里不方便当场说开。",
+          "二叔：可以单独谈，但你今晚还是要给个明确话。",
+          "环境：围观视线退后，私下压力反而更集中。"
+        ],
+        "interactionBeats": [
+          "私下转场：玩家把公开冲突挪到单独对话中处理。",
+          "暂缓升级：公开场面降温，但长辈仍在继续施压。"
+        ],
+        "reactions": [
+          "二叔接受私下对谈，但继续逼玩家先表态。",
+          "环境中的围观压力短暂减弱。"
+        ]
+      }
+    ],
+    "relationshipShiftSummary": [
+      {
+        "agentId": "agent-npc-001",
+        "displayName": "二叔",
+        "shiftSummary": "关系从公开冲撞转为更私密但更尖锐的拉扯。"
+      }
+    ],
+    "environmentPressureLine": [
+      {
+        "turnIndex": 0,
+        "label": "开局高压",
+        "summary": "多人旁听让玩家几乎没有缓冲空间。"
+      },
+      {
+        "turnIndex": 1,
+        "label": "表面降温",
+        "summary": "围观压力下降，但私下对谈压迫感增强。"
+      }
+    ],
+    "timeline": [
+      {
+        "entryId": "timeline-001",
+        "occurredAt": "2026-05-17T12:03:00+08:00",
+        "nodeId": "node-entry-001",
+        "title": "回到旧院",
+        "summary": "玩家回到旧院，长辈视线集中到他身上。",
+        "consequenceSummary": "第一句话会决定谁先占据场面。"
+      }
+    ],
+    "boundaryNotice": "本情境模拟报告用于帮助梳理多方关系、情绪与环境压力，不替代真实的人际判断或专业干预。"
+  },
+  "history": {
+    "items": [
+      {
+        "entryId": "sim-history-001",
+        "occurredAt": "2026-05-17T12:03:00+08:00",
+        "title": "开局装配",
+        "summary": "本局角色与旧院环境被装配完成。",
+        "relatedEntityId": "prepare-001"
+      }
+    ]
+  },
+  "exportMeta": {
+    "format": "html",
+    "fileName": "simulation-report-run-001.html",
+    "mimeType": "text/html",
+    "exportedAt": "2026-05-17T12:20:20+08:00",
+    "generatorVersion": "reporting-v1",
+    "templateVersion": "v1",
+    "formatVersion": "v1",
+    "sanitized": true,
+    "exportedBy": "psyai-reporting"
+  }
+}

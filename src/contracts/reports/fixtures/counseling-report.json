@@ -1,0 +1,122 @@
+{
+  "base": {
+    "reportId": "report-csl-001",
+    "reportType": "counseling",
+    "status": "ready",
+    "generatedAt": "2026-05-11T15:50:00+08:00",
+    "reportVersion": "v1",
+    "generatedBy": "reporting-package-v1",
+    "sanitized": true,
+    "templateVersion": "v1"
+  },
+  "source": {
+    "workflow": "counseling",
+    "sourceEntityId": "csl-session-001",
+    "sourceLabel": "压力与睡眠咨询会话"
+  },
+  "summary": {
+    "title": "压力与睡眠中断咨询报告",
+    "summary": "一份聚焦急性压力、睡眠中断和早期稳定支持建议的简明咨询报告。",
+    "highlights": [
+      {
+        "highlightId": "csl-highlight-001",
+        "label": "风险等级",
+        "value": "中等"
+      },
+      {
+        "highlightId": "csl-highlight-002",
+        "label": "主导阶段",
+        "value": "深入澄清"
+      }
+    ]
+  },
+  "detail": {
+    "sessionId": "csl-session-001",
+    "overview": {
+      "concernSummary": "用户报告了持续压力、明显的生理唤起反应，以及夜间反复醒来。",
+      "riskLevel": "moderate",
+      "dominantStage": "exploration",
+      "escalationLevel": "monitor",
+      "startedAt": "2026-05-11T15:30:00+08:00",
+      "finishedAt": "2026-05-11T15:50:00+08:00"
+    },
+    "sections": [
+      {
+        "sectionId": "csl-section-001",
+        "title": "主要压力源",
+        "stage": "intake",
+        "summary": "首次交流确认了截止压力与持续升高的紧绷感是当前最主要的困扰来源。",
+        "keyExcerpts": [
+          {
+            "excerptId": "csl-excerpt-001",
+            "speaker": "user",
+            "content": "我已经持续紧绷了一周，怎么都平静不下来。",
+            "notedAt": "2026-05-11T15:30:00+08:00"
+          }
+        ],
+        "recommendations": [
+          {
+            "recommendationId": "csl-rec-001",
+            "title": "记录压力最高峰出现的时段",
+            "rationale": "简短的日常记录有助于发现压力反应最容易升级的固定窗口。",
+            "priority": "now"
+          }
+        ]
+      },
+      {
+        "sectionId": "csl-section-002",
+        "title": "睡眠中断模式",
+        "stage": "exploration",
+        "summary": "用户将反复醒来的现象与尚未缓解的压力激活联系在一起。",
+        "keyExcerpts": [
+          {
+            "excerptId": "csl-excerpt-002",
+            "speaker": "user",
+            "content": "而且我最近每晚都会醒来好几次。",
+            "notedAt": "2026-05-11T15:31:00+08:00"
+          }
+        ],
+        "recommendations": [
+          {
+            "recommendationId": "csl-rec-002",
+            "title": "加入简短的睡前收束流程",
+            "rationale": "重复、稳定的睡前流程有助于在入睡前降低身体激活程度。",
+            "priority": "soon"
+          }
+        ]
+      }
+    ],
+    "closingNote": "继续观察睡眠中断情况，若压力模式进一步升级，应重新评估风险。",
+    "escalationSummary": "由于睡眠中断与截止压力叠加，当前风险为中等，建议进行复核。",
+    "boundaryNotice": "本报告由 AI 生成，不能替代专业心理健康评估。"
+  },
+  "history": {
+    "items": [
+      {
+        "entryId": "csl-history-001",
+        "occurredAt": "2026-05-11T15:30:00+08:00",
+        "title": "已记录初始困扰",
+        "summary": "报告已记录截止压力和持续紧绷感是本次会话的起始关注点。",
+        "relatedEntityId": "csl-section-001"
+      },
+      {
+        "entryId": "csl-history-002",
+        "occurredAt": "2026-05-11T15:31:00+08:00",
+        "title": "已展开睡眠澄清",
+        "summary": "夜间反复醒来的现象被进一步关联到尚未缓解的压力激活。",
+        "relatedEntityId": "csl-section-002"
+      }
+    ]
+  },
+  "exportMeta": {
+    "format": "html",
+    "fileName": "心理咨询报告-csl-001.html",
+    "mimeType": "text/html",
+    "exportedAt": "2026-05-11T15:50:30+08:00",
+    "generatorVersion": "reporting-v1",
+    "templateVersion": "v1",
+    "formatVersion": "v1",
+    "sanitized": true,
+    "exportedBy": "psyai-reporting"
+  }
+}

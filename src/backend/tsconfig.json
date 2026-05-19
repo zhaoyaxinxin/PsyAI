@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "baseUrl": ".",
+    "strict": true,
+    "declaration": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "paths": {
+      "@psyai/app-state": [
+        "../app-state/dist/index.d.ts"
+      ],
+      "@psyai/contracts": [
+        "../contracts/dist/index.d.ts"
+      ],
+      "@psyai/counseling": [
+        "../counseling/dist/index.d.ts"
+      ],
+      "@psyai/infrastructure": [
+        "../infrastructure/dist/index.d.ts"
+      ],
+      "@psyai/reporting": [
+        "../reporting/dist/index.d.ts"
+      ],
+      "@psyai/resonance": [
+        "../resonance/dist/index.d.ts"
+      ],
+      "@psyai/runtime": [
+        "../runtime/dist/index.d.ts"
+      ],
+      "@psyai/simulation": [
+        "../simulation/dist/index.d.ts"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}

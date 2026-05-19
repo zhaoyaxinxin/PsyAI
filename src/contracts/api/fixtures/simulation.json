@@ -1,0 +1,903 @@
+{
+  "scenarioRequest": {
+    "scenarioId": "scenario-001"
+  },
+  "scenarioResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-17T12:00:00+08:00",
+    "data": {
+      "scenarioId": "scenario-001",
+      "title": "重落红尘间：旧院夜谈",
+      "description": "围绕旧院夜谈展开的回合制多 Agent 情境模拟。",
+      "entryNodeId": "node-entry-001",
+      "opening": {
+        "sceneTitle": "旧院回廊",
+        "sceneSummary": "夜雨未停，你回到旧院，所有人的情绪都悬在屋檐下。",
+        "playerGoal": "先稳住局势，再决定如何回应长辈。"
+      },
+      "playerSeed": {
+        "agentId": "agent-player-001",
+        "displayName": "我",
+        "persona": {
+          "identity": "离家多年后再次归来的晚辈",
+          "relationshipToPlayer": "自己",
+          "publicGoal": "先稳住局面",
+          "hiddenPressure": "害怕旧账重燃",
+          "coreBelief": "关系至少该有说清楚的机会",
+          "emotionalTrait": "外冷内压抑"
+        },
+        "behavior": {
+          "initiative": 62,
+          "aggression": 28,
+          "avoidance": 56,
+          "compliance": 41,
+          "emotionalVolatility": 53,
+          "empathy": 74
+        },
+        "initialState": "压着情绪观察局势。"
+      },
+      "npcSeeds": [
+        {
+          "agentId": "agent-npc-001",
+          "displayName": "二叔",
+          "persona": {
+            "identity": "家中强势长辈",
+            "relationshipToPlayer": "对玩家有控制欲的长辈",
+            "publicGoal": "要求玩家表态",
+            "hiddenPressure": "担心家中秩序失控",
+            "coreBelief": "晚辈必须给家里一个说法",
+            "emotionalTrait": "强硬压人"
+          },
+          "behavior": {
+            "initiative": 81,
+            "aggression": 66,
+            "avoidance": 18,
+            "compliance": 27,
+            "emotionalVolatility": 48,
+            "empathy": 31
+          },
+          "initialState": "准备先发制人。"
+        }
+      ],
+      "environmentSeed": {
+        "agentId": "agent-env-001",
+        "displayName": "旧院环境",
+        "era": "当代县城家族场景",
+        "location": "祖宅回廊",
+        "socialRule": "长幼秩序与家族体面同时在场",
+        "pressureSource": "深夜、雨声、多人旁听",
+        "eventBias": "容易放大未说开的情绪",
+        "initialState": "空气紧绷。"
+      },
+      "defaultActionSeeds": [
+        {
+          "actionId": "action-001",
+          "label": "先请二叔单独说话",
+          "intent": "把公开施压拉回私人对话场域",
+          "riskHint": "可能被误解为暂时退让"
+        },
+        {
+          "actionId": "action-001b",
+          "label": "先承认自己暂时不想立刻表态",
+          "intent": "先争取时间，观察长辈真正想逼你说什么",
+          "riskHint": "可能被理解为继续回避"
+        }
+      ],
+      "nodes": [
+        {
+          "nodeId": "node-entry-001",
+          "title": "回到旧院",
+          "kind": "entry"
+        },
+        {
+          "nodeId": "node-turn-001",
+          "title": "第一轮行动",
+          "kind": "decision"
+        }
+      ]
+    }
+  },
+  "prepareRequest": {
+    "scenarioId": "scenario-001",
+    "sourceNotes": [
+      "玩家与家里已经冷战三个月。"
+    ],
+    "playerName": "我",
+    "operatorNote": "优先观察长辈压力。"
+  },
+  "prepareResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-17T12:02:00+08:00",
+    "data": {
+      "prepareId": "prepare-001",
+      "scenarioId": "scenario-001",
+      "preparation": {
+        "prepareId": "prepare-001",
+        "scenarioId": "scenario-001",
+        "cast": {
+          "player": {
+            "agentId": "agent-player-001",
+            "displayName": "我",
+            "role": "player",
+            "persona": {
+              "identity": "离家多年后再次归来的晚辈",
+              "relationshipToPlayer": "自己",
+              "publicGoal": "先稳住局面",
+              "hiddenPressure": "害怕旧账重燃",
+              "coreBelief": "关系至少该有说清楚的机会",
+              "emotionalTrait": "外冷内压抑"
+            },
+            "behavior": {
+              "initiative": 62,
+              "aggression": 28,
+              "avoidance": 56,
+              "compliance": 41,
+              "emotionalVolatility": 53,
+              "empathy": 74
+            },
+            "currentState": "压着情绪观察局势。"
+          },
+          "npcs": [
+            {
+              "agentId": "agent-npc-001",
+              "displayName": "二叔",
+              "role": "npc",
+              "persona": {
+                "identity": "家中强势长辈",
+                "relationshipToPlayer": "对玩家有控制欲的长辈",
+                "publicGoal": "要求玩家表态",
+                "hiddenPressure": "担心家中秩序失控",
+                "coreBelief": "晚辈必须给家里一个说法",
+                "emotionalTrait": "强硬压人"
+              },
+              "behavior": {
+                "initiative": 81,
+                "aggression": 66,
+                "avoidance": 18,
+                "compliance": 27,
+                "emotionalVolatility": 48,
+                "empathy": 31
+              },
+              "currentState": "准备先发制人。"
+            }
+          ],
+          "environment": {
+            "agentId": "agent-env-001",
+            "displayName": "旧院环境",
+            "era": "当代县城家族场景",
+            "location": "祖宅回廊",
+            "socialRule": "长幼秩序与家族体面同时在场",
+            "pressureSource": "深夜、雨声、多人旁听",
+            "eventBias": "容易放大未说开的情绪",
+            "currentState": "空气紧绷。"
+          }
+        },
+        "sourceNotes": [
+          "玩家与家里已经冷战三个月。"
+        ],
+        "summary": "本局角色与环境已经装配完成。",
+        "createdAt": "2026-05-17T12:02:00+08:00"
+      }
+    }
+  },
+  "runRequest": {
+    "scenarioId": "scenario-001",
+    "prepareId": "prepare-001",
+    "operatorNote": "先观察长辈施压如何扩散。"
+  },
+  "runResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-17T12:03:00+08:00",
+    "data": {
+      "runId": "run-001",
+      "scenarioId": "scenario-001",
+      "prepareId": "prepare-001",
+      "status": "running",
+      "stage": "turn",
+      "currentTurnIndex": 0,
+      "activeOptions": [
+        {
+          "actionId": "action-001",
+          "label": "先请二叔单独说话",
+          "intent": "把公开施压拉回私人对话场域",
+          "riskHint": "可能被误解为暂时退让"
+        },
+        {
+          "actionId": "action-001b",
+          "label": "先承认自己暂时不想立刻表态",
+          "intent": "先争取时间，观察长辈真正想逼你说什么",
+          "riskHint": "可能被理解为继续回避"
+        }
+      ],
+      "cast": {
+        "player": {
+          "agentId": "agent-player-001",
+          "displayName": "我",
+          "role": "player",
+          "persona": {
+            "identity": "离家多年后再次归来的晚辈",
+            "relationshipToPlayer": "自己",
+            "publicGoal": "先稳住局面",
+            "hiddenPressure": "害怕旧账重燃",
+            "coreBelief": "关系至少该有说清楚的机会",
+            "emotionalTrait": "外冷内压抑"
+          },
+          "behavior": {
+            "initiative": 62,
+            "aggression": 28,
+            "avoidance": 56,
+            "compliance": 41,
+            "emotionalVolatility": 53,
+            "empathy": 74
+          },
+          "currentState": "压着情绪观察局势。"
+        },
+        "npcs": [
+          {
+            "agentId": "agent-npc-001",
+            "displayName": "二叔",
+            "role": "npc",
+            "persona": {
+              "identity": "家中强势长辈",
+              "relationshipToPlayer": "对玩家有控制欲的长辈",
+              "publicGoal": "要求玩家表态",
+              "hiddenPressure": "担心家中秩序失控",
+              "coreBelief": "晚辈必须给家里一个说法",
+              "emotionalTrait": "强硬压人"
+            },
+            "behavior": {
+              "initiative": 81,
+              "aggression": 66,
+              "avoidance": 18,
+              "compliance": 27,
+              "emotionalVolatility": 48,
+              "empathy": 31
+            },
+            "currentState": "准备先发制人。"
+          }
+        ],
+        "environment": {
+          "agentId": "agent-env-001",
+          "displayName": "旧院环境",
+          "era": "当代县城家族场景",
+          "location": "祖宅回廊",
+          "socialRule": "长幼秩序与家族体面同时在场",
+          "pressureSource": "深夜、雨声、多人旁听",
+          "eventBias": "容易放大未说开的情绪",
+          "currentState": "空气紧绷。"
+        }
+      },
+      "preparation": {
+        "prepareId": "prepare-001",
+        "scenarioId": "scenario-001",
+        "cast": {
+          "player": {
+            "agentId": "agent-player-001",
+            "displayName": "我",
+            "role": "player",
+            "persona": {
+              "identity": "离家多年后再次归来的晚辈",
+              "relationshipToPlayer": "自己",
+              "publicGoal": "先稳住局面",
+              "hiddenPressure": "害怕旧账重燃",
+              "coreBelief": "关系至少该有说清楚的机会",
+              "emotionalTrait": "外冷内压抑"
+            },
+            "behavior": {
+              "initiative": 62,
+              "aggression": 28,
+              "avoidance": 56,
+              "compliance": 41,
+              "emotionalVolatility": 53,
+              "empathy": 74
+            },
+            "currentState": "压着情绪观察局势。"
+          },
+          "npcs": [
+            {
+              "agentId": "agent-npc-001",
+              "displayName": "二叔",
+              "role": "npc",
+              "persona": {
+                "identity": "家中强势长辈",
+                "relationshipToPlayer": "对玩家有控制欲的长辈",
+                "publicGoal": "要求玩家表态",
+                "hiddenPressure": "担心家中秩序失控",
+                "coreBelief": "晚辈必须给家里一个说法",
+                "emotionalTrait": "强硬压人"
+              },
+              "behavior": {
+                "initiative": 81,
+                "aggression": 66,
+                "avoidance": 18,
+                "compliance": 27,
+                "emotionalVolatility": 48,
+                "empathy": 31
+              },
+              "currentState": "准备先发制人。"
+            }
+          ],
+          "environment": {
+            "agentId": "agent-env-001",
+            "displayName": "旧院环境",
+            "era": "当代县城家族场景",
+            "location": "祖宅回廊",
+            "socialRule": "长幼秩序与家族体面同时在场",
+            "pressureSource": "深夜、雨声、多人旁听",
+            "eventBias": "容易放大未说开的情绪",
+            "currentState": "空气紧绷。"
+          }
+        },
+        "sourceNotes": [
+          "玩家与家里已经冷战三个月。"
+        ],
+        "summary": "本局角色与环境已经装配完成。",
+        "createdAt": "2026-05-17T12:02:00+08:00"
+      },
+      "currentNode": {
+        "nodeId": "node-entry-001",
+        "title": "回到旧院",
+        "summary": "你站在回廊尽头，今晚的第一句话会决定谁先占据场面。",
+        "kind": "entry",
+        "availableBranches": [],
+        "availableActions": [
+          {
+            "actionId": "action-001",
+            "label": "先请二叔单独说话",
+            "intent": "把公开施压拉回私人对话场域",
+            "riskHint": "可能被误解为暂时退让"
+          },
+          {
+            "actionId": "action-001b",
+            "label": "先承认自己暂时不想立刻表态",
+            "intent": "先争取时间，观察长辈真正想逼你说什么",
+            "riskHint": "可能被理解为继续回避"
+          }
+        ]
+      },
+      "turnHistory": [],
+      "environmentState": "空气紧绷。",
+      "bootstrap": {
+        "ready": true,
+        "scene": "route",
+        "workflow": "simulation"
+      },
+      "createdAt": "2026-05-17T12:03:00+08:00",
+      "updatedAt": "2026-05-17T12:03:00+08:00"
+    }
+  },
+  "nodeRequest": {
+    "runId": "run-001"
+  },
+  "nodeResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-17T12:03:30+08:00",
+    "data": {
+      "runId": "run-001",
+      "status": "running",
+      "stage": "turn",
+      "currentTurnIndex": 0,
+      "activeOptions": [
+        {
+          "actionId": "action-001",
+          "label": "先请二叔单独说话",
+          "intent": "把公开施压拉回私人对话场域",
+          "riskHint": "可能被误解为暂时退让"
+        },
+        {
+          "actionId": "action-001b",
+          "label": "先承认自己暂时不想立刻表态",
+          "intent": "先争取时间，观察长辈真正想逼你说什么",
+          "riskHint": "可能被理解为继续回避"
+        }
+      ],
+      "cast": {
+        "player": {
+          "agentId": "agent-player-001",
+          "displayName": "我",
+          "role": "player",
+          "persona": {
+            "identity": "离家多年后再次归来的晚辈",
+            "relationshipToPlayer": "自己",
+            "publicGoal": "先稳住局面",
+            "hiddenPressure": "害怕旧账重燃",
+            "coreBelief": "关系至少该有说清楚的机会",
+            "emotionalTrait": "外冷内压抑"
+          },
+          "behavior": {
+            "initiative": 62,
+            "aggression": 28,
+            "avoidance": 56,
+            "compliance": 41,
+            "emotionalVolatility": 53,
+            "empathy": 74
+          },
+          "currentState": "压着情绪观察局势。"
+        },
+        "npcs": [
+          {
+            "agentId": "agent-npc-001",
+            "displayName": "二叔",
+            "role": "npc",
+            "persona": {
+              "identity": "家中强势长辈",
+              "relationshipToPlayer": "对玩家有控制欲的长辈",
+              "publicGoal": "要求玩家表态",
+              "hiddenPressure": "担心家中秩序失控",
+              "coreBelief": "晚辈必须给家里一个说法",
+              "emotionalTrait": "强硬压人"
+            },
+            "behavior": {
+              "initiative": 81,
+              "aggression": 66,
+              "avoidance": 18,
+              "compliance": 27,
+              "emotionalVolatility": 48,
+              "empathy": 31
+            },
+            "currentState": "准备先发制人。"
+          }
+        ],
+        "environment": {
+          "agentId": "agent-env-001",
+          "displayName": "旧院环境",
+          "era": "当代县城家族场景",
+          "location": "祖宅回廊",
+          "socialRule": "长幼秩序与家族体面同时在场",
+          "pressureSource": "深夜、雨声、多人旁听",
+          "eventBias": "容易放大未说开的情绪",
+          "currentState": "空气紧绷。"
+        }
+      },
+      "currentNode": {
+        "nodeId": "node-entry-001",
+        "title": "回到旧院",
+        "summary": "你站在回廊尽头，今晚的第一句话会决定谁先占据场面。",
+        "kind": "entry",
+        "availableBranches": [],
+        "availableActions": [
+          {
+            "actionId": "action-001",
+            "label": "先请二叔单独说话",
+            "intent": "把公开施压拉回私人对话场域",
+            "riskHint": "可能被误解为暂时退让"
+          },
+          {
+            "actionId": "action-001b",
+            "label": "先承认自己暂时不想立刻表态",
+            "intent": "先争取时间，观察长辈真正想逼你说什么",
+            "riskHint": "可能被理解为继续回避"
+          }
+        ]
+      },
+      "turnHistory": [],
+      "environmentState": "空气紧绷。",
+      "updatedAt": "2026-05-17T12:03:30+08:00"
+    }
+  },
+  "advanceRequest": {
+    "runId": "run-001",
+    "actionId": "action-001",
+    "rationale": "先把最强势的长辈从众目睽睽之下挪开。"
+  },
+  "advanceResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-17T12:05:00+08:00",
+    "data": {
+      "runId": "run-001",
+      "previousNodeId": "node-entry-001",
+      "status": "running",
+      "stage": "outcome",
+      "currentTurnIndex": 1,
+      "activeOptions": [
+        {
+          "actionId": "action-002",
+          "label": "承认自己暂时不想立刻表态",
+          "intent": "继续争取时间",
+          "riskHint": "可能进一步刺激长辈"
+        }
+      ],
+      "cast": {
+        "player": {
+          "agentId": "agent-player-001",
+          "displayName": "我",
+          "role": "player",
+          "persona": {
+            "identity": "离家多年后再次归来的晚辈",
+            "relationshipToPlayer": "自己",
+            "publicGoal": "先稳住局面",
+            "hiddenPressure": "害怕旧账重燃",
+            "coreBelief": "关系至少该有说清楚的机会",
+            "emotionalTrait": "外冷内压抑"
+          },
+          "behavior": {
+            "initiative": 62,
+            "aggression": 28,
+            "avoidance": 56,
+            "compliance": 41,
+            "emotionalVolatility": 53,
+            "empathy": 74
+          },
+          "currentState": "主动接住了第一轮压力。"
+        },
+        "npcs": [
+          {
+            "agentId": "agent-npc-001",
+            "displayName": "二叔",
+            "role": "npc",
+            "persona": {
+              "identity": "家中强势长辈",
+              "relationshipToPlayer": "对玩家有控制欲的长辈",
+              "publicGoal": "要求玩家表态",
+              "hiddenPressure": "担心家中秩序失控",
+              "coreBelief": "晚辈必须给家里一个说法",
+              "emotionalTrait": "强硬压人"
+            },
+            "behavior": {
+              "initiative": 81,
+              "aggression": 66,
+              "avoidance": 18,
+              "compliance": 27,
+              "emotionalVolatility": 48,
+              "empathy": 31
+            },
+            "currentState": "从公开逼问转为私下试探。"
+          }
+        ],
+        "environment": {
+          "agentId": "agent-env-001",
+          "displayName": "旧院环境",
+          "era": "当代县城家族场景",
+          "location": "祖宅回廊",
+          "socialRule": "长幼秩序与家族体面同时在场",
+          "pressureSource": "深夜、雨声、多人旁听",
+          "eventBias": "容易放大未说开的情绪",
+          "currentState": "旁听压力短暂减弱。"
+        }
+      },
+      "currentNode": {
+        "nodeId": "node-turn-001",
+        "title": "第一轮行动",
+        "summary": "你把二叔请到偏廊边缘，公开逼问变成了更私密的高压对谈。",
+        "kind": "decision",
+        "availableBranches": [],
+        "availableActions": [
+          {
+            "actionId": "action-002",
+            "label": "承认自己暂时不想立刻表态",
+            "intent": "继续争取时间",
+            "riskHint": "可能进一步刺激长辈"
+          }
+        ],
+        "latestOutcome": {
+          "turnId": "turn-001",
+          "turnIndex": 1,
+          "playerAction": {
+            "actionId": "action-001",
+            "label": "先请二叔单独说话",
+            "rationale": "先把最强势的长辈从众目睽睽之下挪开。"
+          },
+          "dialogueSequence": [
+            {
+              "lineId": "line-001",
+              "sequence": 1,
+              "agentId": "agent-player-001",
+              "displayName": "我",
+              "role": "player",
+              "tone": "probe",
+              "content": "先请二叔单独说话，这里不适合当场说开。"
+            },
+            {
+              "lineId": "line-002",
+              "sequence": 2,
+              "agentId": "agent-npc-001",
+              "displayName": "二叔",
+              "role": "npc",
+              "tone": "defend",
+              "content": "可以单独谈，但你今晚还是要给个明确态度。"
+            },
+            {
+              "lineId": "line-003",
+              "sequence": 3,
+              "agentId": "environment-001",
+              "displayName": "环境",
+              "role": "environment",
+              "tone": "observe",
+              "content": "围观压力略降，但私下表态的逼迫感更集中。"
+            }
+          ],
+          "interactionBeats": [
+            {
+              "beatId": "beat-001",
+              "type": "conflict",
+              "title": "私下施压",
+              "summary": "公开冲突被移到私下，但长辈施压没有真正撤退。",
+              "agentIds": ["agent-player-001", "agent-npc-001"]
+            },
+            {
+              "beatId": "beat-002",
+              "type": "retreat",
+              "title": "围观降温",
+              "summary": "旁观者退开，场面表面降温。",
+              "agentIds": ["agent-npc-001"]
+            }
+          ],
+          "npcReactions": [
+            {
+              "agentId": "agent-npc-001",
+              "displayName": "二叔",
+              "reactionType": "speech",
+              "summary": "他接受私下对谈，但继续逼你先表态。",
+              "stateAfter": "从公开逼问转为私下试探。"
+            }
+          ],
+          "environmentReaction": {
+            "summary": "围观的人群稍稍散开，但紧张并没有消失。",
+            "stateAfter": "旁听压力短暂减弱。"
+          },
+          "consequenceSummary": "第一轮没有直接爆炸，但你被推进了更难回避的私下表态时刻。",
+          "nextActionOptions": [
+            {
+              "actionId": "action-002",
+              "label": "承认自己暂时不想立刻表态",
+              "intent": "继续争取时间",
+              "riskHint": "可能进一步刺激长辈"
+            }
+          ],
+          "actorStateChanges": [
+            {
+              "agentId": "agent-player-001",
+              "displayName": "我",
+              "beforeState": "压着情绪观察局势。",
+              "afterState": "主动接住了第一轮压力。",
+              "summary": "玩家从被动观察切换成主动控场。"
+            }
+          ],
+          "createdAt": "2026-05-17T12:05:00+08:00"
+        }
+      },
+      "latestOutcome": {
+        "turnId": "turn-001",
+        "turnIndex": 1,
+          "playerAction": {
+            "actionId": "action-001",
+            "label": "先请二叔单独说话",
+            "rationale": "先把最强势的长辈从众目睽睽之下挪开。"
+          },
+          "dialogueSequence": [
+            {
+              "lineId": "line-001",
+              "sequence": 1,
+              "agentId": "agent-player-001",
+              "displayName": "我",
+              "role": "player",
+              "tone": "probe",
+              "content": "先请二叔单独说话，这里不适合当场说开。"
+            },
+            {
+              "lineId": "line-002",
+              "sequence": 2,
+              "agentId": "agent-npc-001",
+              "displayName": "二叔",
+              "role": "npc",
+              "tone": "defend",
+              "content": "可以单独谈，但你今晚还是要给个明确态度。"
+            },
+            {
+              "lineId": "line-003",
+              "sequence": 3,
+              "agentId": "environment-001",
+              "displayName": "环境",
+              "role": "environment",
+              "tone": "observe",
+              "content": "围观压力略降，但私下表态的逼迫感更集中。"
+            }
+          ],
+          "interactionBeats": [
+            {
+              "beatId": "beat-001",
+              "type": "conflict",
+              "title": "私下施压",
+              "summary": "公开冲突被移到私下，但长辈施压没有真正撤退。",
+              "agentIds": ["agent-player-001", "agent-npc-001"]
+            },
+            {
+              "beatId": "beat-002",
+              "type": "retreat",
+              "title": "围观降温",
+              "summary": "旁观者退开，场面表面降温。",
+              "agentIds": ["agent-npc-001"]
+            }
+          ],
+          "npcReactions": [
+          {
+            "agentId": "agent-npc-001",
+            "displayName": "二叔",
+            "reactionType": "speech",
+            "summary": "他接受私下对谈，但继续逼你先表态。",
+            "stateAfter": "从公开逼问转为私下试探。"
+          }
+        ],
+        "environmentReaction": {
+          "summary": "围观的人群稍稍散开，但紧张并没有消失。",
+          "stateAfter": "旁听压力短暂减弱。"
+        },
+        "consequenceSummary": "第一轮没有直接爆炸，但你被推进了更难回避的私下表态时刻。",
+        "nextActionOptions": [
+          {
+            "actionId": "action-002",
+            "label": "承认自己暂时不想立刻表态",
+            "intent": "继续争取时间",
+            "riskHint": "可能进一步刺激长辈"
+          }
+        ],
+        "actorStateChanges": [
+          {
+            "agentId": "agent-player-001",
+            "displayName": "我",
+            "beforeState": "压着情绪观察局势。",
+            "afterState": "主动接住了第一轮压力。",
+            "summary": "玩家从被动观察切换成主动控场。"
+          }
+        ],
+        "createdAt": "2026-05-17T12:05:00+08:00"
+      },
+      "turnHistory": [
+        {
+          "turnId": "turn-001",
+          "turnIndex": 1,
+          "playerAction": {
+            "actionId": "action-001",
+            "label": "先请二叔单独说话",
+            "rationale": "先把最强势的长辈从众目睽睽之下挪开。"
+          },
+          "dialogueSequence": [
+            {
+              "lineId": "line-001",
+              "sequence": 1,
+              "agentId": "agent-player-001",
+              "displayName": "我",
+              "role": "player",
+              "tone": "probe",
+              "content": "先请二叔单独说话，这里不适合当场说开。"
+            },
+            {
+              "lineId": "line-002",
+              "sequence": 2,
+              "agentId": "agent-npc-001",
+              "displayName": "二叔",
+              "role": "npc",
+              "tone": "defend",
+              "content": "可以单独谈，但你今晚还是要给个明确态度。"
+            },
+            {
+              "lineId": "line-003",
+              "sequence": 3,
+              "agentId": "environment-001",
+              "displayName": "环境",
+              "role": "environment",
+              "tone": "observe",
+              "content": "围观压力略降，但私下表态的逼迫感更集中。"
+            }
+          ],
+          "interactionBeats": [
+            {
+              "beatId": "beat-001",
+              "type": "conflict",
+              "title": "私下施压",
+              "summary": "公开冲突被移到私下，但长辈施压没有真正撤退。",
+              "agentIds": ["agent-player-001", "agent-npc-001"]
+            },
+            {
+              "beatId": "beat-002",
+              "type": "retreat",
+              "title": "围观降温",
+              "summary": "旁观者退开，场面表面降温。",
+              "agentIds": ["agent-npc-001"]
+            }
+          ],
+          "npcReactions": [
+            {
+              "agentId": "agent-npc-001",
+              "displayName": "二叔",
+              "reactionType": "speech",
+              "summary": "他接受私下对谈，但继续逼你先表态。",
+              "stateAfter": "从公开逼问转为私下试探。"
+            }
+          ],
+          "environmentReaction": {
+            "summary": "围观的人群稍稍散开，但紧张并没有消失。",
+            "stateAfter": "旁听压力短暂减弱。"
+          },
+          "consequenceSummary": "第一轮没有直接爆炸，但你被推进了更难回避的私下表态时刻。",
+          "nextActionOptions": [
+            {
+              "actionId": "action-002",
+              "label": "承认自己暂时不想立刻表态",
+              "intent": "继续争取时间",
+              "riskHint": "可能进一步刺激长辈"
+            }
+          ],
+          "actorStateChanges": [
+            {
+              "agentId": "agent-player-001",
+              "displayName": "我",
+              "beforeState": "压着情绪观察局势。",
+              "afterState": "主动接住了第一轮压力。",
+              "summary": "玩家从被动观察切换成主动控场。"
+            }
+          ],
+          "createdAt": "2026-05-17T12:05:00+08:00"
+        }
+      ],
+      "environmentState": "旁听压力短暂减弱。",
+      "updatedAt": "2026-05-17T12:05:00+08:00"
+    }
+  },
+  "reportRequest": {
+    "runId": "run-001"
+  },
+  "reportResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-17T12:20:00+08:00",
+    "data": {
+      "runId": "run-001",
+      "ready": true,
+      "reportReference": {
+        "reportId": "report-sim-001",
+        "workflow": "simulation",
+        "reportVersion": "v1",
+        "generatedAt": "2026-05-17T12:20:00+08:00"
+      }
+    }
+  },
+  "finishRequest": {
+    "runId": "run-001",
+    "reason": "story_resolved"
+  },
+  "finishResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-17T12:18:00+08:00",
+    "data": {
+      "runId": "run-001",
+      "status": "completed",
+      "finishedAt": "2026-05-17T12:18:00+08:00",
+      "reportReference": {
+        "reportId": "report-sim-001",
+        "workflow": "simulation",
+        "reportVersion": "v1",
+        "generatedAt": "2026-05-17T12:20:00+08:00"
+      }
+    }
+  },
+  "listRequest": {
+    "page": 1,
+    "pageSize": 10
+  },
+  "listResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-17T12:25:00+08:00",
+    "data": {
+      "items": [
+        {
+          "runId": "run-001",
+          "scenarioId": "scenario-001",
+          "scenarioTitle": "重落红尘间：旧院夜谈",
+          "status": "running",
+          "currentNodeTitle": "第一轮行动",
+          "currentTurnIndex": 1,
+          "stage": "outcome",
+          "nodeCount": 2,
+          "createdAt": "2026-05-17T12:03:00+08:00",
+          "updatedAt": "2026-05-17T12:05:00+08:00"
+        }
+      ],
+      "pageInfo": {
+        "page": 1,
+        "pageSize": 10,
+        "totalItems": 1,
+        "hasNextPage": false
+      }
+    }
+  }
+}

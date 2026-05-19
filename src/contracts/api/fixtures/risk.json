@@ -1,0 +1,43 @@
+{
+  "riskConfirmationRequest": {
+    "workflow": "counseling",
+    "entityId": "csl-session-001",
+    "action": "confirm",
+    "occurredAt": "2026-05-13T19:00:00+08:00"
+  },
+  "riskConfirmationResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-13T19:00:01+08:00",
+    "data": {
+      "workflow": "counseling",
+      "entityId": "csl-session-001",
+      "action": "confirm",
+      "confirmed": true,
+      "boundaryNotice": "本工具不能替代专业心理健康照护。",
+      "escalationResources": [
+        { "label": "全国心理危机热线", "description": "提供 24 小时保密支持。", "contact": "988" },
+        { "label": "本地紧急服务", "description": "如需即时援助，请拨打 110。" }
+      ],
+      "confirmedAt": "2026-05-13T19:00:01+08:00"
+    }
+  },
+  "riskStatusRequest": {
+    "workflow": "counseling",
+    "entityId": "csl-session-001"
+  },
+  "riskStatusResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-13T19:01:00+08:00",
+    "data": {
+      "workflow": "counseling",
+      "entityId": "csl-session-001",
+      "riskLevel": "moderate",
+      "escalationStatus": "review_recommended",
+      "confirmationRequired": true,
+      "lastConfirmedAt": "2026-05-13T19:00:01+08:00",
+      "signals": [
+        { "signalId": "sig-001", "reason": "睡眠中断与截止压力同时出现。" }
+      ]
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "hostInitRequest": {},
+  "hostInitResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-13T18:00:00+08:00",
+    "data": {
+      "bootstrap": { "ready": true, "scene": "entry", "workflow": "counseling" },
+      "dataDirectoryReady": true,
+      "providerConfigured": true,
+      "consentCompleted": false,
+      "startupCompletedAt": "2026-05-13T18:00:00+08:00"
+    }
+  },
+  "dataDirectoryCheckRequest": {},
+  "dataDirectoryCheckResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-13T18:01:00+08:00",
+    "data": {
+      "rootPath": "./data",
+      "scopes": [
+        { "scope": "db", "path": "./data/db", "exists": true, "writable": true, "estimatedSizeBytes": 4096 },
+        { "scope": "uploads", "path": "./data/uploads", "exists": true, "writable": true },
+        { "scope": "exports", "path": "./data/exports", "exists": false, "writable": false }
+      ],
+      "allReady": false,
+      "checkedAt": "2026-05-13T18:01:00+08:00"
+    }
+  },
+  "providerConfigGetRequest": {},
+  "providerConfigGetResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-13T18:02:00+08:00",
+    "data": {
+      "provider": "local-default",
+      "modelId": "psyai-default",
+      "endpoint": "",
+      "timeoutMs": 30000,
+      "maxRetries": 3,
+      "capabilities": ["chat"]
+    }
+  },
+  "providerConfigUpdateRequest": {
+    "provider": "openai",
+    "endpoint": "https://api.openai.com/v1",
+    "timeoutMs": 60000
+  },
+  "providerConfigUpdateResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-13T18:02:30+08:00",
+    "data": {
+      "provider": "openai",
+      "modelId": "psyai-default",
+      "endpoint": "https://api.openai.com/v1",
+      "timeoutMs": 60000,
+      "maxRetries": 3,
+      "capabilities": ["chat"]
+    }
+  },
+  "providerTestRequest": {},
+  "providerTestResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-13T18:03:00+08:00",
+    "data": {
+      "success": true,
+      "latencyMs": 120,
+      "testedAt": "2026-05-13T18:03:00+08:00"
+    }
+  },
+  "cleanupRequest": {
+    "scope": "exports",
+    "confirm": true
+  },
+  "cleanupResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-13T18:04:00+08:00",
+    "data": {
+      "scope": "exports",
+      "pendingItemsBefore": 3,
+      "removedItems": 3,
+      "freedSpaceEstimate": "12 KB",
+      "completedAt": "2026-05-13T18:04:00+08:00",
+      "partial": false
+    }
+  }
+}

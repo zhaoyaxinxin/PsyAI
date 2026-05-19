@@ -1,0 +1,59 @@
+{
+  "systemHealthRequest": {
+    "includeDetails": true
+  },
+  "systemHealthResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-13T19:20:00+08:00",
+    "data": {
+      "overall": "healthy",
+      "provider": {
+        "status": "healthy",
+        "provider": "local-default",
+        "modelId": "psyai-default",
+        "lastTestedAt": "2026-05-13T19:19:00+08:00",
+        "lastTestLatencyMs": 15
+      },
+      "storage": {
+        "status": "healthy",
+        "rootPath": "./data",
+        "scopesReady": true,
+        "totalEstimatedBytes": 24576,
+        "lastCheckedAt": "2026-05-13T19:18:00+08:00"
+      },
+      "retrieval": {
+        "status": "healthy",
+        "indexCount": 3,
+        "documentCount": 12,
+        "lastIndexedAt": "2026-05-13T19:17:00+08:00"
+      },
+      "checkedAt": "2026-05-13T19:20:00+08:00"
+    }
+  },
+  "systemStatusRequest": {},
+  "systemStatusResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-13T19:21:00+08:00",
+    "data": {
+      "overall": "healthy",
+      "uptimeSeconds": 3600,
+      "activeWorkflows": 2,
+      "totalReports": 5,
+      "version": "0.1.0",
+      "checkedAt": "2026-05-13T19:21:00+08:00"
+    }
+  },
+  "workflowStatusRequest": {},
+  "workflowStatusResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-13T19:22:00+08:00",
+    "data": {
+      "items": [
+        { "workflow": "counseling", "activeCount": 1, "completedCount": 2, "totalReportCount": 2 },
+        { "workflow": "simulation", "activeCount": 1, "completedCount": 1, "totalReportCount": 2 },
+        { "workflow": "resonance", "activeCount": 0, "completedCount": 1, "totalReportCount": 1 }
+      ],
+      "checkedAt": "2026-05-13T19:22:00+08:00"
+    }
+  }
+}

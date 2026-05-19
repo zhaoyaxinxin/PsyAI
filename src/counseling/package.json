@@ -1,0 +1,25 @@
+{
+  "name": "@psyai/counseling",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "dependencies": {
+    "@psyai/contracts": "file:../contracts",
+    "@psyai/shared": "file:../shared"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "pretest": "npm run build --silent",
+    "test": "node ./tests/run-counseling-tests.mjs"
+  }
+}

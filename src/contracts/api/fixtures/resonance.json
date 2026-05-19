@@ -1,0 +1,280 @@
+{
+  "inputRequest": {
+    "sourceType": "text",
+    "text": "Repeated family conflict has left me numb, and I no longer know how to respond."
+  },
+  "inputResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-11T15:45:00+08:00",
+    "data": {
+      "inputId": "res-input-001",
+      "sourceType": "text",
+      "status": "accepted",
+      "bootstrap": {
+        "ready": true,
+        "scene": "focus",
+        "workflow": "resonance"
+      },
+      "receivedAt": "2026-05-11T15:45:00+08:00",
+      "previewText": "Repeated family conflict has left me numb..."
+    }
+  },
+  "analyzeRequest": {
+    "inputId": "res-input-001"
+  },
+  "analyzeResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-11T15:45:10+08:00",
+    "data": {
+      "inputId": "res-input-001",
+      "analysis": {
+        "analyzedAt": "2026-05-11T15:45:10+08:00",
+        "summary": "文本围绕反复家庭冲突后的情绪麻木、退缩和回应困难。",
+        "themes": [
+          "家庭冲突",
+          "情绪麻木",
+          "退缩"
+        ],
+        "emotions": [
+          "麻木",
+          "无助"
+        ],
+        "relationships": [
+          "家庭"
+        ],
+        "conflicts": [
+          "重复争执",
+          "回应困难"
+        ],
+        "defenses": [
+          "回避",
+          "情感抽离"
+        ],
+        "imagery": [
+          "僵住",
+          "耗尽"
+        ],
+        "queryTerms": [
+          "家庭冲突",
+          "情绪麻木",
+          "退缩",
+          "回应困难"
+        ],
+        "narrativeSignals": [
+          "反复出现",
+          "难以回应"
+        ],
+        "confidence": 0.84,
+        "notes": [
+          "用于下一阶段检索驱动"
+        ]
+      }
+    }
+  },
+  "importSuccessResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-13T12:00:00+08:00",
+    "data": {
+      "inputId": "res-input-002",
+      "sourceType": "file",
+      "status": "accepted",
+      "bootstrap": {
+        "ready": true,
+        "scene": "focus",
+        "workflow": "resonance"
+      },
+      "receivedAt": "2026-05-13T12:00:00+08:00",
+      "previewText": "The uploaded notes describe rising anxiety in social interactions.",
+      "file": {
+        "fileId": "file-res-001",
+        "fileName": "anxiety-notes.md",
+        "mimeType": "text/markdown"
+      },
+      "importResult": {
+        "status": "success",
+        "inputId": "res-input-002",
+        "parsedAt": "2026-05-13T12:00:00+08:00",
+        "warnings": [
+          {
+            "code": "parse.unknown_field",
+            "message": "Found unsupported field \"custom_notes\" while parsing the upload.",
+            "field": "custom_notes",
+            "line": 42
+          }
+        ]
+      }
+    }
+  },
+  "importFailureResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-13T12:00:10+08:00",
+    "data": {
+      "inputId": "res-input-003",
+      "sourceType": "file",
+      "status": "accepted",
+      "bootstrap": {
+        "ready": true,
+        "scene": "focus",
+        "workflow": "resonance"
+      },
+      "receivedAt": "2026-05-13T12:00:10+08:00",
+      "file": {
+        "fileId": "file-res-002",
+        "fileName": "broken-report.md",
+        "mimeType": "text/markdown"
+      },
+      "importResult": {
+        "status": "failure",
+        "code": "import.unsupported_format",
+        "message": "The uploaded file does not match any supported resonance import format.",
+        "recoverable": true
+      }
+    }
+  },
+  "compareRequest": {
+    "inputId": "res-input-001",
+    "topK": 3
+  },
+  "compareResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-11T15:45:30+08:00",
+    "data": {
+      "comparisonId": "res-compare-001",
+      "inputId": "res-input-001",
+      "status": "completed",
+      "createdAt": "2026-05-11T15:45:30+08:00",
+      "topMatchId": "match-001",
+      "reportReady": true
+    }
+  },
+  "matchesRequest": {
+    "comparisonId": "res-compare-001",
+    "page": 1,
+    "pageSize": 3
+  },
+  "matchesResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-11T15:45:35+08:00",
+    "data": {
+      "comparisonId": "res-compare-001",
+      "items": [
+        {
+          "matchId": "match-001",
+          "caseId": "case-102",
+          "title": "Long-term family tension with emotional shutdown",
+          "score": 0.92,
+          "rationale": "The emotional shutdown pattern overlaps strongly with the submitted text.",
+          "matchedSignals": [
+            "family conflict",
+            "emotional shutdown",
+            "withdrawal"
+          ],
+          "mismatchSignals": [
+            "repair attempt"
+          ],
+          "uncertainty": "The case does not clarify whether the subject still wants to repair the relationship.",
+          "keep": true,
+          "excerpt": "The subject reported emotional numbness after repeated family confrontations."
+        }
+      ],
+      "pageInfo": {
+        "page": 1,
+        "pageSize": 3,
+        "totalItems": 1,
+        "hasNextPage": false
+      }
+    }
+  },
+  "finishRequest": {
+    "comparisonId": "res-compare-001",
+    "reason": "user_completed"
+  },
+  "finishResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-13T16:00:00+08:00",
+    "data": {
+      "comparisonId": "res-compare-001",
+      "status": "completed",
+      "finishedAt": "2026-05-13T16:00:00+08:00",
+      "reportReference": {
+        "reportId": "report-res-001",
+        "workflow": "resonance",
+        "reportVersion": "v1",
+        "generatedAt": "2026-05-13T16:00:00+08:00"
+      }
+    }
+  },
+  "detailRequest": {
+    "comparisonId": "res-compare-001"
+  },
+  "detailResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-13T10:00:00+08:00",
+    "data": {
+      "comparisonId": "res-compare-001",
+      "inputId": "res-input-001",
+      "sourceType": "text",
+      "status": "completed",
+      "createdAt": "2026-05-11T15:45:30+08:00",
+      "previewText": "Repeated family conflict has left me numb...",
+      "topMatchId": "match-001",
+      "reportReady": true,
+      "reportReference": {
+        "reportId": "report-res-001",
+        "workflow": "resonance",
+        "reportVersion": "v1",
+        "generatedAt": "2026-05-13T16:00:00+08:00"
+      }
+    }
+  },
+  "listRequest": {
+    "page": 1,
+    "pageSize": 10
+  },
+  "listResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-13T10:00:00+08:00",
+    "data": {
+      "items": [
+        {
+          "comparisonId": "res-compare-001",
+          "inputId": "res-input-001",
+          "inputPreviewText": "Repeated family conflict has left me numb...",
+          "status": "completed",
+          "createdAt": "2026-05-11T15:45:30+08:00",
+          "topMatchTitle": "Long-term family tension with emotional shutdown",
+          "reportReady": true,
+          "reportReference": {
+            "reportId": "report-res-001",
+            "workflow": "resonance",
+            "reportVersion": "v1",
+            "generatedAt": "2026-05-13T16:00:00+08:00"
+          }
+        }
+      ],
+      "pageInfo": {
+        "page": 1,
+        "pageSize": 10,
+        "totalItems": 1,
+        "hasNextPage": false
+      }
+    }
+  },
+  "reportRequest": {
+    "comparisonId": "res-compare-001"
+  },
+  "reportResponse": {
+    "status": "ok",
+    "timestamp": "2026-05-11T15:46:00+08:00",
+    "data": {
+      "comparisonId": "res-compare-001",
+      "ready": true,
+      "reportReference": {
+        "reportId": "report-res-001",
+        "workflow": "resonance",
+        "reportVersion": "v1",
+        "generatedAt": "2026-05-11T15:46:00+08:00"
+      }
+    }
+  }
+}

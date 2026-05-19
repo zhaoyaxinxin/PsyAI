@@ -1,0 +1,20 @@
+{
+  "name": "@psyai/app-state",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "dependencies": {
+    "@psyai/shared": "file:../shared"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "validate:app-state": "npm run build --silent && node ./validate-app-state.mjs"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "@psyai/backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "dependencies": {
+    "@psyai/app-state": "file:../app-state",
+    "@psyai/contracts": "file:../contracts",
+    "@psyai/counseling": "file:../counseling",
+    "@psyai/infrastructure": "file:../infrastructure",
+    "@psyai/reporting": "file:../reporting",
+    "@psyai/resonance": "file:../resonance",
+    "@psyai/runtime": "file:../runtime",
+    "@psyai/simulation": "file:../simulation"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "npm run build --silent && node ./tests/run-backend-tests.mjs"
+  }
+}
