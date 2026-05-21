@@ -79,11 +79,4 @@ npm run check
 
 `npm test`、`npm run smoke:*` 在当前源码版中只保留占位说明，不再包含自动化测试资产。
 
-## 发布建议
 
-上传 GitHub 前，建议确认：
-
-1. 本地 `node_modules/` 没有被提交
-2. 各 workspace 的 `dist/` 没有被提交
-3. `data/db/`、`data/indexes/`、`data/exports/`、`data/uploads/`、`data/snapshots/` 没有被提交
-4. `data/knowledge-counseling/` 和 `data/knowledge-resonance/` 中只保留你愿意公开分发的种子材料
